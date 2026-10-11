@@ -17,7 +17,7 @@ export class PostService {
   constructor(private _httpService:HttpClient) { }
 
   private readonly  POST_BASE =environment.Post_base;
-  private readonly post_url = `${this.POST_BASE}/posts`
+  private readonly post_url = `${this.POST_BASE}`
 
       editOBj$= new Subject<Ipost>();
 
