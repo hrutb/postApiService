@@ -1,0 +1,21 @@
+<div class="card">
+   <div class="card-header"></div>
+    <form action="" #postForm="ngForm" (ngSubmit)="onAdd()">
+             <div class="card-body">
+                 <div class="form-group">
+                   <label for="title">Post title</label>
+                    <input type="text" id="title" ngModel name="title" class="form-control">
+                 </div>
+
+                 <div class="form-group">
+                   <label for="body">Post content</label>
+                    <input type="text" id="body" ngModel name="body" class="form-control" required>
+                 </div>
+             </div>
+
+             <div class="card-footer d-flex justify-content-between">
+                       <button class="btn btn-block btn-outline-primary" *ngIf="!IsInEditMode">Add post</button>
+                       <button class="btn  btn-block btn-outline-success" *ngIf="IsInEditMode" type="button" (click)="onUpdate()">Update post</button>
+             </div>
+    </form>
+</div>
